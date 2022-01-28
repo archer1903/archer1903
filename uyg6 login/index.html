@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        body {
+
+            background-image: url(1.jpg);
+        }
+
+
+        #table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            background-color: lightblue;
+
+            position: static;
+            margin: auto;
+            margin-top: 200px;
+            opacity: 0.9;
+
+
+
+        }
+
+
+        input {
+
+            height: 90%;
+            opacity: 0.8;
+            background-color: white;
+
+        }
+
+
+
+        td {
+            
+            padding: 3px;
+            text-align: left;
+            width: 180px;
+            height: 50px;
+
+        }
+
+        #td3 {
+            text-align: center;
+        }
+
+        #buton {
+            height: 50px;
+            width: 200px;
+            position: static;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body id="body">
+
+    <table id="table">
+        <tr>
+            <td>
+                <p>Kullanıcı Adı:</p>
+            </td>
+            <td><input id="input1" type="text"></td>
+
+        </tr>
+        <tr>
+            <td>
+                <p>Şifre:</p>
+            </td>
+            <td><input id="input2 " type="password"></td>
+
+        </tr>
+        <tr>
+            <td id="td3" colspan="2"><button onclick="login()" id="buton">Login</button></td>
+
+        </tr>
+
+    </table>
+
+
+
+
+
+
+
+    <script>
+        setInterval(function arkaplan() {
+            var a = Math.round(Math.random() * 11);
+
+            document.getElementById("body").style.backgroundImage = "url(" + a + ".jpg)";
+        }, 3000);
+
+
+        var kullanicilar = [{kullaniciadi: "admin", sifre: "admin"},
+            {kullaniciadi: "huseyin", sifre: "1234"},
+            {kullaniciadi: "kartal", sifre: "1234"}];
+
+        var girilenKullaniciAdi;
+        var girilenSifre;
+        
+        var x;
+
+        function kontrolEt() {
+
+            girilenKullaniciAdi = document.getElementById("input1").value;
+            girilenSifre = document.getElementById("input2").value;
+            
+
+            for (x of kullanicilar) {
+
+
+                if ((x.kullaniciadi == girilenKullaniciAdi) && (x.sifre == girilenSifre))
+                {
+                    return true;
+                } 
+            }
+        }
+
+
+
+        function login() {
+
+            kontrolEt();
+
+            if (kontrolEt()) {
+                alert("Giriş doğrulandı.");
+
+            } else {
+                alert("Giriş doğrulanamadı.");
+            }
+
+        }
+
+
+        
+
+
+
+    </script>
+</body>
+
+</html>
