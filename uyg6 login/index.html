@@ -27,11 +27,7 @@
             margin: auto;
             margin-top: 200px;
             opacity: 0.9;
-
-
-
         }
-
 
         input {
 
@@ -41,15 +37,12 @@
 
         }
 
-
-
         td {
             
             padding: 3px;
             text-align: left;
             width: 180px;
             height: 50px;
-
         }
 
         #td3 {
@@ -73,7 +66,6 @@
                 <p>Kullanıcı Adı:</p>
             </td>
             <td><input id="input1" type="text"></td>
-
         </tr>
         <tr>
             <td>
@@ -84,24 +76,15 @@
         </tr>
         <tr>
             <td id="td3" colspan="2"><button onclick="login()" id="buton">Login</button></td>
-
         </tr>
-
     </table>
-
-
-
-
-
-
 
     <script>
         setInterval(function arkaplan() {
-            var a = Math.round(Math.random() * 11);
+            var a = Math.round(Math.random() * 2);
 
             document.getElementById("body").style.backgroundImage = "url(" + a + ".jpg)";
         }, 3000);
-
 
         var kullanicilar = [{kullaniciadi: "admin", sifre: "admin"},
             {kullaniciadi: "huseyin", sifre: "1234"},
@@ -128,8 +111,6 @@
             }
         }
 
-
-
         function login() {
 
             kontrolEt();
@@ -142,10 +123,6 @@
             }
 
         }
-
-
-        
-
 
 
     </script>
